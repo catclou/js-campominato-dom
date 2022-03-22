@@ -10,26 +10,37 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <title>Campo Minato</title>
 </head>
+
 <body>
 
     <!-- header -->
     <header>
-        <img src="./assets/img/Logo.png" alt="logo Boolean">
-        <h1>Campo Minato</h1>
+        <div class="logo-container">
+            <img src="./assets/img/Logo.png" alt="logo Boolean">
+            <h1>Campo Minato</h1>
+        </div>
+
+        <div class="input-container">
+            <label for="">A quale difficoltà vuoi giocare?</label>
+            <select name="" id="difficolta">
+                <option value="facile">Facile</option>
+                <option value="media">Media</option>
+                <option value="difficile">Difficile</option>
+            </select>
+            <button id="playBtn">Gioca</button>
+        </div>
     </header>
 
     <!-- main -->
     
     <main>
-
         <!-- griglia di gioco -->
-        <section id="griglia" class="container"></section>
-
+        <section id="griglia" class="none"></section>
     </main>
 
     <!-- footer -->
     <footer>
-        <p>Made with &hearts; by <a href="https://boolean.careers/">Boolean</a></p>
+        <p class="footer-signature">Made with &hearts; by <a href="https://boolean.careers/">Boolean</a></p>
     </footer>
     
     <!-- appoggio qui il collegamento al main.JS, spero non me lo rubi nessuno -->
