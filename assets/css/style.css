@@ -1,0 +1,58 @@
+/* reset starts here */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+/* reset ends here */
+
+:root {
+    --background-aqua: #7fffd4;
+    --text-white: white;
+    --border-size: 1px;
+    --border-type: solid;
+    --margin-y: 30px 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header > img {
+    height: 2.5rem;
+    margin: 30px;
+}
+
+main {
+    background-color: var(--background-aqua);
+}
+
+.container {
+    height: 80vh;
+    width: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.box {
+    width: calc( 100% / 10 );
+    height: calc( 100% / 10 );
+    border: var(--border-size) var(--border-type);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p {
+    margin: 30px;
+    font-size: large;
+}
+
+.clicked {
+    background-color: #6495ed;
+    color: var(--text-white);
+}
