@@ -39,18 +39,20 @@ function play() {
     function generateBombs() {
         const generatedBombs = [];
 
-        while (generateBombs.length < bombs_number) {
+        while (generatedBombs.length < bombs_number) {
             const bomb = getRandomInt(1, cellsNumber);
-            if (!generateBombs.includes(bomb)) {
+            if (!generatedBombs.includes(bomb)) {
                 generatedBombs.push(bomb);
             }
         }
 
         // Riordino il pacchetto di bombe
-        generateBombs.sort((a, b) => a - b);
-        console.log("Il pacchetto di bombe: ", generateBombs);
-        return generateBombs;
+        generatedBombs.sort((a, b) => a - b);
+        console.log("Il pacchetto di bombe: ", generatedBombs);
+
+        return generatedBombs;
     }
+
 
     generatePlayground();
 
@@ -103,14 +105,31 @@ function play() {
             square.removeEventListener("click", handleCellClick);
         }
 
+        // const messageEl = document.createElement("div");
+
+        // let finalMessage = document.getElementById("final-message");
+        // const messageEl = finalMessage.createElement("div");
+        // finalMessage.append(messageEl);
+        // messageEl.className = "message";
+        
+
+        // let finalMessage = document.getElementById("final-message");
+        // let messageEl = document.createElement("div");
+        // finalMessage.append(messageEl);
+        // finalMessage.className = "message";
+
+        
+        // document.getElementById('final-message').appendChild(messageEl);
+        // const messageEl = document.getElementById("final-message");
         const messageEl = document.createElement("div");
         messageEl.className = "message";
+
         let message = "Complimenti, hai vinto! Gioca ancora...";
-        if (attempts.length < max_attempts) {
-            message = `Peccato, hai perso! Hai azzeccato ${attempts.length} tentativi. Gioca ancora...`;
+        if (attempts.length < MAX_ATTEMPTS) {
+            message = `Peccato, hai perso! Hai azzeccato ${attempts.length} tentativi. Ricarica la pagina e gioca ancora... `;
         }
         messageEl.textContent = message;
-        document.querySelector("main").append(messageEl);
+        document.querySelector("footer").append(messageEl);
     }
 }
 

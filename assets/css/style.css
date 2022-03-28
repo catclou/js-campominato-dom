@@ -46,6 +46,7 @@ main {
     height: 80vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .grid {
@@ -95,10 +96,17 @@ footer {
     height: 10vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .footer-signature {
     margin-left: 1rem;
+}
+
+.message {
+    margin-right: 10rem;
+    font-weight: bold;
+    font-size: larger;
 }
 
 
