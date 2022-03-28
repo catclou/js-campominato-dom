@@ -48,7 +48,7 @@ main {
     align-items: center;
 }
 
-.griglia {
+.grid {
     height: 600px;
     width: 600px;
     display: flex;
@@ -57,16 +57,7 @@ main {
     border: 1px solid black;
 }
 
-/* .box {
-    width: calc( 100% / 10 );
-    height: calc( 100% / 10 );
-    border: var(--border-size) var(--border-type);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-.box-10 {
+/* .box-10 {
     width: calc( 100% / 10 );
     height: calc( 100% / 10 );
     border: var(--border-size) var(--border-type);
@@ -91,6 +82,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+} */
+
+.square {
+    border: var(--border-size) var(--border-type) black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
@@ -104,8 +102,13 @@ footer {
 }
 
 
-.clicked {
+.safe {
     background-color: #6495ed;
+    color: var(--text-white);
+}
+
+.bomb {
+    background-color: red;
     color: var(--text-white);
 }
 
